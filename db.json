@@ -1,0 +1,58 @@
+{
+  "menus": [
+    {
+      "codiceContenuto": "1",
+      "idContenuto": 1,
+      "idElemento": 1,
+      "idVoceMenu": 1,
+      "path": "/vantaggi",
+      "titolo": "vantaggi"
+    },
+    {
+      "codiceContenuto": "2",
+      "idContenuto": 2,
+      "idElemento": 2,
+      "idVoceMenu": 2,
+      "path": "/acosaserve",
+      "titolo": "a cosa serve?"
+    }
+  ],
+  "content": [
+    {
+      "id": "1",
+      "title": "VANTAGGI",
+      "desc": "I finanziamenti sono un mezzo per ottenere denaro in prestito per sostenere l'acquisto di beni o la realizzazione di progetti. Possono essere ottenuti attraverso istituti di credito come banche o finanziarie. I finanziamenti possono essere a breve o lungo termine e hanno tassi di interesse variabili o fissi. È importante valutare attentamente la propria situazione finanziaria prima di richiedere un finanziamento, per assicurarsi di essere in grado di ripagare il debito. È inoltre necessario fornire garanzie, come un'ipoteca su un immobile, per ottenere un finanziamento. I finanziamenti possono essere utilizzati per diverse finalità come acquisto auto, acquisto casa, consolidamento debiti, investimenti o per l'avvio di un'attività. In ogni caso, è fondamentale informarsi e confrontare le diverse offerte prima di scegliere quella più adatta alle proprie esigenze.",
+      "img": "https://www.amaplast.org/archivioFiles/News/2020_bandi_regionali.png"
+    },
+    {
+      "id": "2",
+      "title": "A COSA SERVE",
+      "desc": "Un finanziamento è un mezzo attraverso il quale una persona o un'azienda può ottenere denaro in prestito per sostenere l'acquisto di beni o la realizzazione di progetti. Ci sono diverse tipologie di finanziamenti, come ad esempio: finanziamenti personali, prestiti finalizzati, prestiti al consumo, prestiti auto, prestiti per ristrutturazione, mutui, leasing, ecc. Ognuno di questi ha delle caratteristiche specifiche e può essere più adatto ad una determinata esigenza. Un finanziamento può essere utilizzato per diversi scopi come l'acquisto di una casa, l'acquisto di un'auto, il consolidamento dei debiti, gli investimenti o l'avvio di un'attività. Inoltre, può essere utilizzato per coprire i costi dell'istruzione o per finanziare progetti di ristrutturazione e miglioramento della casa.     Per ottenere un finanziamento, è necessario fornire garanzie come un'ipoteca su un immobile o una busta paga, e presentare la documentazione richiesta dall'istituto di credito. Inoltre, è importante valutare attentamente la propria situazione finanziaria prima di richiedere un finanziamento, per assicurarsi di essere in grado di ripagare il debito.E' importante considerare anche le spese accessorie legate al finanziamento come commissioni, assicurazioni, spese di istruttoria, penali per estinzione anticipata, per avere una visione globale del costo del finanziamento. E' sempre consigliabile confrontare le diverse offerte e scegliere quella più adatta alle proprie esigenze",
+      "img": "https://thewam.net/wp-content/uploads/2021/10/Finanziamento-con-partita-iva-appena-aperta-1.jpg"
+    }
+  ],
+  "preventivo": {
+    "showDatiFinanziari": false,
+    "expandDatiAnagrafici": true,
+    "expandDatiFinanziari": false,
+    "modalConvenzioneVisible": false,
+    "modalConvenzioneMessage": "",
+    "importoRichiestoMin": 1000,
+    "importoRichiestoMax": 75000,
+    "importoRataMin": 0,
+    "importoRataMax": 0,
+    "importoRata": "1343.08",
+    "durata": 24,
+    "dataNascita": "2022-12-30",
+    "dataAssunzione": "2023-01-25",
+    "campagnaCodice": "",
+    "campagnaToken": "",
+    "codiceTipoRichiedente": "Dipendente",
+    "cognome": "",
+    "convenzioneCodice": "",
+    "importoNettoRedditoMensile": "0",
+    "importoRichiesto": "32234",
+    "isSubmitted": true,
+    "nome": ""
+  }
+}
