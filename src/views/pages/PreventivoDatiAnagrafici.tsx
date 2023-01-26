@@ -50,14 +50,14 @@ function PreventivoDatiAnagrafici() {
     console.log(dataAssunzione,dataNascita)
     const form = e.currentTarget;
     e.preventDefault();
+
    if (form.checkValidity() === false) {
-      e.preventDefault();
       e.stopPropagation();
       console.log("if")
-
     } 
     
     const durata = preventivo.durata;
+    
 
     const simulator:IPreventivo={ ...preventivo,
       importoRichiesto: importo,
@@ -68,11 +68,11 @@ function PreventivoDatiAnagrafici() {
       importoRata:(parseFloat(importo)/(durata)).toFixed(2)
       /* importoRata: (parseFloat(importo) / durata) + 50, */}
     
-      console.log(simulator)
-    setPreventivo(preventivo);
+
+    setPreventivo(simulator);
       console.log(preventivo)
 
-    postPreventivo(simulator);
+    postPreventivo(preventivo);
     setValidated(true);
     Navigate(api.endpointsPage.preventivoPage);
 
@@ -89,6 +89,7 @@ function PreventivoDatiAnagrafici() {
     setTipo(e.currentTarget.value);
   }
   console.log(tipo)
+  
   return (
     <>
       <Form  validated={validated} onSubmit={handleSubmit}>

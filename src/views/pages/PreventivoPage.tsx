@@ -6,17 +6,20 @@ import usePreventivo from "../../shared/hooks/usePreventivo";
 
 function PreventivoPage() {
 
-    const {getPreventivo,preventivoGet}=usePreventivo();
+    const {getPreventivo}=usePreventivo();
+
+    let preventivoGet:IPreventivo;
 
     useEffect(()=>{
+        
         getPreventivo();
     },[])
 
     const {keycloak,initialized}=useKeycloak();
 
     return ( 
-      
-        <Card
+      <>
+      {/* <Card
         bg="primary"
       
         text='white'
@@ -30,7 +33,8 @@ function PreventivoPage() {
              durata: {preventivoGet.durata}  importo rata:{preventivoGet.importoRata}
           </Card.Text>
         </Card.Body>
-      </Card>
+      </Card> */}</>
+        
        )
 
 }

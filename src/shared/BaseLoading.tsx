@@ -1,6 +1,7 @@
 import Spinner from "react-bootstrap/esm/Spinner";
 
 
+
 function BaseLoading() {
     return (
       <div>
@@ -10,5 +11,6 @@ function BaseLoading() {
         </div>
       );
 }
+
 
 export default BaseLoading;

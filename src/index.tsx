@@ -5,14 +5,17 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ReactKeycloakProvider } from '@react-keycloak/web';
 import keycloak from "./keycloak"
-
+import {Provider} from "react-redux"
+import { store } from './store/store';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
     <ReactKeycloakProvider authClient={keycloak}>
+      <Provider store={store} >
     <App />
+    </Provider>
     </ReactKeycloakProvider>
   </React.StrictMode>
 );

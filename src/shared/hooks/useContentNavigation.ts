@@ -11,11 +11,11 @@ function useContentNavigation() {
         axios.get('http://localhost:3000/content')
     .then(response => {
         setContent(response.data);
-        setLoaingContent(!loadingContent);
+        setLoaingContent(false);
     })
     .catch(error => {
       console.log(error);
-      setLoaingContent(!loadingContent);
+      setLoaingContent(false);
     });
    
     }

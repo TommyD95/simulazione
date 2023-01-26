@@ -11,11 +11,11 @@ function useHeaderNavigation() {
         axios.get('http://localhost:3000/menus')
     .then(response => {
         setMenus(response.data);
-        setLoaing(!loading);
+        setLoaing(false);
     })
     .catch(error => {
       console.log(error);
-      setLoaing(!loading);
+      setLoaing(false);
     });
    
     }
