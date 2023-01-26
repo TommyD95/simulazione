@@ -31,28 +31,31 @@
       "img": "https://thewam.net/wp-content/uploads/2021/10/Finanziamento-con-partita-iva-appena-aperta-1.jpg"
     }
   ],
-  "preventivo": {
-    "showDatiFinanziari": false,
-    "expandDatiAnagrafici": true,
-    "expandDatiFinanziari": false,
-    "modalConvenzioneVisible": false,
-    "modalConvenzioneMessage": "",
-    "importoRichiestoMin": 1000,
-    "importoRichiestoMax": 75000,
-    "importoRataMin": 0,
-    "importoRataMax": 0,
-    "importoRata": "88.75",
-    "durata": 24,
-    "dataNascita": "2023-01-05",
-    "dataAssunzione": "2023-01-13",
-    "campagnaCodice": "",
-    "campagnaToken": "",
-    "codiceTipoRichiedente": "Dipendente",
-    "cognome": "",
-    "convenzioneCodice": "",
-    "importoNettoRedditoMensile": "0",
-    "importoRichiesto": "2130",
-    "isSubmitted": true,
-    "nome": ""
-  }
+  "preventivo": [
+    {
+      "showDatiFinanziari": false,
+      "expandDatiAnagrafici": true,
+      "expandDatiFinanziari": false,
+      "modalConvenzioneVisible": false,
+      "modalConvenzioneMessage": "",
+      "importoRichiestoMin": 1000,
+      "importoRichiestoMax": 75000,
+      "importoRataMin": 0,
+      "importoRataMax": 0,
+      "importoRata": "41.67",
+      "durata": 24,
+      "dataNascita": "2023-01-12",
+      "dataAssunzione": "2023-02-01",
+      "campagnaCodice": "",
+      "campagnaToken": "",
+      "codiceTipoRichiedente": "Dipendente",
+      "cognome": "",
+      "convenzioneCodice": "",
+      "importoNettoRedditoMensile": "0",
+      "importoRichiesto": "1000.01",
+      "isSubmitted": true,
+      "nome": "",
+      "id": 1
+    }
+  ]
 }

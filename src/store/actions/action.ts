@@ -7,13 +7,14 @@ message:string
 }
 
 
-export const getChiamataPreventivo = createAsyncThunk<IPreventivo,any,{rejectValue:FetchError}>('preventivo/getChiamataPreventivo', async (_:any,thunkApi) => {
+export const getChiamataPreventivo = createAsyncThunk<IPreventivo[],any,{rejectValue:FetchError}>('preventivo/getChiamataPreventivo', async (_:any,thunkApi) => {
     try {
         const response = await axios.get(`http://localhost:3000/preventivo`);
-        const data:IPreventivo=response.data;
+        const data:IPreventivo[]=response.data;
         if(response.status !== 200){
             return thunkApi.rejectWithValue({message:"failed"})
         }
+        console.log(data)
         return data;
     } catch (error) {
         const errorMessage = 'There was an error';

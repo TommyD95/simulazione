@@ -20,9 +20,9 @@ function Homepage() {
         <div >
             <Container>
                 <Row > 
-                    <Col sm="6" style={{order:1}}>
+                    <Col style={{order:1}}>
                     {loadingContent ? <BaseLoading /> : <BaseContent content={content}/>}</Col>
-                    <Col sm="6" style={{order:2,position:"fixed",right:0}}><BoxPreventivo /></Col>
+                    <Col style={{order:2}}><BoxPreventivo /></Col>
                 </Row>
             </Container>
             

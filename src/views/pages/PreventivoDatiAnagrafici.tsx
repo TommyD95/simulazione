@@ -17,31 +17,7 @@ function PreventivoDatiAnagrafici() {
   const [dataAssunzione, setDataAssunzione] = useState<string>("");
 
 
-  const [preventivo, setPreventivo] = useState<IPreventivo>({
-    tipoRisultato: undefined,
-    showDatiFinanziari: false,
-    expandDatiAnagrafici: true,
-    expandDatiFinanziari: false,
-    modalConvenzioneVisible: false,
-    modalConvenzioneMessage: "",
-    importoRichiestoMin: 1000,
-    importoRichiestoMax: 75000,
-    importoRataMin: 0,
-    importoRataMax: 0,
-    importoRata: "0",
-    durata: 24,
-    dataNascita: "",
-    dataAssunzione: "",
-    campagnaCodice: "",
-    campagnaToken: "",
-    codiceTipoRichiedente: "",
-    cognome: "",
-    convenzioneCodice: "",
-    importoNettoRedditoMensile: "0",
-    importoRichiesto: "0",
-    isSubmitted: false,
-    nome: ""
-  })
+
 
 
   const [validated, setValidated] = useState<boolean>(false)
@@ -56,23 +32,42 @@ function PreventivoDatiAnagrafici() {
       console.log("if")
     } 
     
-    const durata = preventivo.durata;
+  
     
 
-    const simulator:IPreventivo={ ...preventivo,
-      importoRichiesto: importo,
-      codiceTipoRichiedente: tipo,
-      isSubmitted: true,
+    let simulator:IPreventivo;
+
+    simulator={     tipoRisultato: undefined,
+      showDatiFinanziari: false,
+      expandDatiAnagrafici: true,
+      expandDatiFinanziari: false,
+      modalConvenzioneVisible: false,
+      modalConvenzioneMessage: "",
+      importoRichiestoMin: 1000,
+      importoRichiestoMax: 75000,
+      importoRataMin: 0,
+      importoRataMax: 0,
+      importoRata: (parseFloat(importo)/24).toFixed(2),
+      durata: 24,
       dataNascita: dataNascita,
       dataAssunzione: dataAssunzione,
-      importoRata:(parseFloat(importo)/(durata)).toFixed(2)
-      /* importoRata: (parseFloat(importo) / durata) + 50, */}
+      campagnaCodice: "",
+      campagnaToken: "",
+      codiceTipoRichiedente: tipo,
+      cognome: "",
+      convenzioneCodice: "",
+      importoNettoRedditoMensile: "0",
+      importoRichiesto: importo,
+      isSubmitted: true,
+      nome: ""
+}
+      /* importoRata: (parseFloat(importo) / durata) + 50, */
     
 
-    setPreventivo(simulator);
-      console.log(preventivo)
+   
 
-    postPreventivo(preventivo);
+    postPreventivo(simulator);
+   
     setValidated(true);
     Navigate(api.endpointsPage.preventivoPage);
 
