@@ -7,6 +7,8 @@ import { ReactKeycloakProvider } from '@react-keycloak/web';
 import keycloak from "./keycloak"
 import {Provider} from "react-redux"
 import { store } from './store/store';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

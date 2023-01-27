@@ -1,4 +1,3 @@
-import { isParameter } from "typescript"
 
 type IPreventivo={
      tipoRisultato: undefined;

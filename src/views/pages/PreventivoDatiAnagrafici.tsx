@@ -1,7 +1,6 @@
-import React, { ChangeEvent, FormEvent, useEffect, useState } from "react";
-import { Form, Button, Col, FormControl, FormGroup, Row } from "react-bootstrap";
-import { Navigate, useNavigate } from "react-router";
-import { idText } from "typescript";
+import React, { useState } from "react";
+import { Form, Button, Col, FormGroup, Row } from "react-bootstrap";
+import {useNavigate } from "react-router";
 import api from "../../api/api";
 import IPreventivo from "../../preventivo/model";
 import usePreventivo from "../../shared/hooks/usePreventivo";
@@ -9,35 +8,29 @@ import usePreventivo from "../../shared/hooks/usePreventivo";
 function PreventivoDatiAnagrafici() {
 
   const Navigate = useNavigate();
+
   const {  postPreventivo } = usePreventivo();
 
   const [importo, setImporto] = useState<string>("0");
   const [tipo, setTipo] = useState<string>("non determinato");
   const [dataNascita, setDataNascita] = useState<string>("");
   const [dataAssunzione, setDataAssunzione] = useState<string>("");
-
-
-
-
-
   const [validated, setValidated] = useState<boolean>(false)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+
     console.log(dataAssunzione,dataNascita)
     const form = e.currentTarget;
     e.preventDefault();
 
    if (form.checkValidity() === false) {
       e.stopPropagation();
-      console.log("if")
     } 
-    
-  
-    
 
     let simulator:IPreventivo;
 
-    simulator={     tipoRisultato: undefined,
+    simulator={     
+      tipoRisultato: undefined,
       showDatiFinanziari: false,
       expandDatiAnagrafici: true,
       expandDatiFinanziari: false,
@@ -60,30 +53,21 @@ function PreventivoDatiAnagrafici() {
       importoRichiesto: importo,
       isSubmitted: true,
       nome: ""
-}
-      /* importoRata: (parseFloat(importo) / durata) + 50, */
-    
-
-   
+    } 
 
     postPreventivo(simulator);
-   
     setValidated(true);
     Navigate(api.endpointsPage.preventivoPage);
-
   }
 
   const inputImporto=(e:React.ChangeEvent<HTMLInputElement>)=>{
     e.preventDefault();
     setImporto(e.target.value)
-  
   }
-
 
   const selectHandler = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setTipo(e.currentTarget.value);
   }
-  console.log(tipo)
   
   return (
     <>

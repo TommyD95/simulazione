@@ -1,4 +1,5 @@
 import { Container, Nav,Navbar, NavDropdown } from 'react-bootstrap';
+import api from '../api/api';
 import IContent from '../content/model/model';
 import IMenu from "../menus/model/model";
 import useContentNavigation from './hooks/useContentNavigation';
@@ -10,9 +11,8 @@ type IProps={
 
 function Header(props:IProps) {
 
-    const {menus,content}=props;
-
-   
+  const { menus, content } = props;
+  
 
     const scroll=(codiceContenuto:string|undefined)=>{
       if(content){
@@ -20,20 +20,24 @@ function Header(props:IProps) {
         if(contenuto){
           const elem:HTMLElement|null=document.getElementById(contenuto.id);
         elem?.scrollIntoView();}
-      }
-      
+      }  
     }
   
-
     return ( 
       <div style={{marginBottom:'60px'}}>
             <Navbar fixed='top' bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="/">Simulazione</Navbar.Brand>
           <Nav className="me-auto">
-            {menus.map((menu:IMenu,i:number)=>(
-                            <Nav.Link key={i} onClick={()=>scroll(menu.codiceContenuto)}>{menu.titolo}</Nav.Link>
-            ))}
+          {
+            menus.map(
+              (menu:IMenu,i:number)=>(
+              <Nav.Link key={i} onClick={()=>scroll(menu.codiceContenuto)}>{menu.titolo}</Nav.Link>
+              )
+            )
+              }
+              <Nav.Link key={3} href={api.endpointsPage.preventiviPage}>preventivi</Nav.Link>
+         
           </Nav>
         </Container>
       </Navbar>

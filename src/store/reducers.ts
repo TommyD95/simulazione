@@ -25,11 +25,9 @@ const initialState: PreventivoReducerType = {
 
 export const preventivoReducer = createReducer(initialState, (builder) => {
     builder.addCase(getChiamataPreventivo.pending, (state) => {
-        console.log('getPreventivo pending')
-
         state.status = "loading";
         state.error = null;
-    })
+         })
         .addCase(getChiamataPreventivo.fulfilled, (state, { payload }) => {
             state.preventivo = [...payload];
             state.status = "idle";
@@ -39,7 +37,5 @@ export const preventivoReducer = createReducer(initialState, (builder) => {
                 state.error = payload.message
             }
         })
-
 }
-
 )
